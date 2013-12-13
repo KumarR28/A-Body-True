@@ -10,50 +10,6 @@ body{
 
 /* Layout Styles Starts */
 
-#contact_form_holder {
-    font-family: 'Verdana'; /* this is a nice font-family, at least i think, if you don't like it change it <img src="http://web.enavu.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley">  */
-    font-variant: small-caps; /* making the small letter looks like capital but keeping the size of it to smaller, looks cool */
-    width:400px; /* setting a fixed width of the contact form holder will make things easier later (like aligning and such) */
-}
-#contact_form_holder input, #contact_form_holder textarea {
-    width:100%; /* make all the inputs and the textarea same size (100% of the div they are into) */
-    font-family: inherit ; /* we must set this, so it inherits the font-family */
-    padding:5px; /* and make a custom padding, you can set whatever you like */
-}
-#contact_form_holder textarea {
-    height:100px; /* i never liked small textareas, so make it 100px in height */
-}
-#send_message {
-    width:200px !important; /* the width of the submit button  */
-    font-variant: small-caps; /* nicer font-variant (like explained before) */
-    border:1px solid black; /* remove the default border and put a normal black one */
-    cursor:pointer;
-    cursor:hand;
-}
-#cf_submit_p { text-align:right; } /* show the submit button aligned with the right side */
-
-/* styling */
-
-.error {
-    display: none; /* hide the errors */
-    /* add some styling */
-    padding:10px;
-    color: #D8000C;
-    font-size:12px;
-    background-color: #FFBABA;
-}
-.success {
-    display: none; /* hide the sucess div */
-    /* add some styling */
-    padding:10px;
-    color: #044406;
-    font-size:12px;
-    background-color: #B7FBB9;
-}
-
-#contact_logo { vertical-align: middle; }
-.error img { vertical-align:top; }
-
 #wrapper-outer{
 	background:url(../images/wrapper-outer-bg.png) no-repeat;
 	width:955px;
@@ -73,7 +29,7 @@ body{
 	#header{
 		width:105px;
 		height:529px;
-		background:#fff;
+		background:url(../images/header-bg.gif) repeat-x;
 		float:left;
 		display:block;
 	}
@@ -131,7 +87,7 @@ body{
 					color:#1a9db8;
 				}
 			.haccordion .header .about{
-				background:url(../images/aboutme.jpg) no-repeat;
+				background:url(../images/about.gif) no-repeat;
 			}
 				.haccordion .header .about span{
 					display:none;
@@ -144,37 +100,38 @@ body{
 				.haccordion .content .about a{
 					color:#538a0d;			
 				}
-			.haccordion .header .mypractice{
-				background:url(../images/mypractice.gif) no-repeat;
+			.haccordion .header .services{
+				background:url(../images/services.gif) no-repeat;
 			}
-				.haccordion .header .mypractice span{
+				.haccordion .header .services span{
 					display:none;
 				}
-			.haccordion .content .mypractice{
+			.haccordion .content .services{
 			}
-				.haccordion .content .mypractice h3 span{
+				.haccordion .content .services h3 span{
 					color:#ce9c02;
 				}
-				.haccordion .content .mypractice a{
+				.haccordion .content .services a{
 					color:#b38804;			
 				}
-			.haccordion .header .testimonials{
-				background:url(../images/testimonials.gif) no-repeat;
+				
+			.haccordion .header .photofolio{
+				background:url(../images/photofolio.gif) no-repeat;
 			}
-				.haccordion .header .testimonials span{
+				.haccordion .header .photofolio span{
 					display:none;
 				}
-			.haccordion .content .testimonials{
+			.haccordion .content .photofolio{
 			}
-				.haccordion .content .testimonials h3 span{
+				.haccordion .content .photofolio h3 span{
 					color:#d35f10;
 				}
-				.haccordion .content .testimonials a{
+				.haccordion .content .photofolio a{
 					color:#ac4c0b;			
 				}
 				/* added .blog */
-				.haccordion .header .blog{
-				background:url(../images/blog.gif) no-repeat;
+					.haccordion .header .blog{
+				background:url(../images/about.gif) no-repeat;
 			}
 				.haccordion .header .blog span{
 					display:none;
@@ -182,7 +139,7 @@ body{
 			.haccordion .content .blog{
 			}
 				.haccordion .content .blog h3 span{
-					color:#7e0b80;
+					color:#60a40b;
 				}
 				.haccordion .content .blog a{
 					color:#538a0d;			
@@ -206,12 +163,12 @@ body{
 				}
 				.haccordion .content .contact a{
 					color:#cb3080;			
-				}
-			.haccordion .header .home, .haccordion .header .about, .haccordion .header .mypractice, .haccordion .header .testimonials, .haccordion .header .blog, .haccordion .header .contact{
+				}	
+			.haccordion .header .home, .haccordion .header .about, .haccordion .header .services, .haccordion .header .photofolio,.haccordion .header .blog, .haccordion .header .contact{
 				width:43px;
 				height:529px;
 			}
-			#container .haccordion .content .home, .haccordion .content .about, .haccordion .content .mypractice, .haccordion .content .testimonials, .haccordion .content .blog,.haccordion .content .contact{
+			#container .haccordion .content .home, .haccordion .content .about, .haccordion .content .services, .haccordion .content .photofolio, .haccordion .content .blog, .haccordion .content .contact .haccordion .content .contact{
 				padding:25px 15px 0 15px;
 				color:#000;
 				height:504px;
@@ -345,13 +302,6 @@ a {
 	text-decoration:none;
 	font-weight:bold;
 }
-
-.contact {height: 600px; overflow: auto;}
-.contact img {height:154px;
-width:312px;}
-.social img {margin: 10px 40px; width: 150px;
-width:125px; height:70px;}
-
 a:hover {text-decoration:underline;color:#000;}
 h1{font-size:28px;}
 h2{font-size:24px;}
@@ -359,9 +309,7 @@ h3{font-size:20px;}
 h4{font-size:16px;}
 h5, h6{font-size:14px;}
 h1,h2,h3,h4,h5,h6{margin:0 0 25px 0; font-family:"Trebuchet MS";}
-img{border:none;
-/* New */
-}
+img{border:none;}
 .clear{clear:both;}
 .floatleft{float:left;}
 .floatright{float:right;}
